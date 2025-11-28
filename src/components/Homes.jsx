@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Cards from '../components/Cards'
+import Products from './Products';
 import { Link } from 'react-router-dom';
+import Login from './Login';
+import Brand from './Brand';
+import Blog from './Blog'
+import NewCards from './NewCards'
+
 
 const categoryNames = {
   1: "Accessories",
@@ -21,7 +28,7 @@ const Homes = () => {
         const res = await fetch('https://691aa27e2d8d7855756f8c58.mockapi.io/products2');
         if (!res.ok) throw new Error(`HTTP xato! Status: ${res.status}`);
         const data = await res.json();
-       
+
         const filtered = data.filter(cat => cat.id >= 1 && cat.id <= 6);
         setCategories(filtered);
       } catch (err) {
@@ -38,6 +45,7 @@ const Homes = () => {
   if (error) return <p className="text-center p-4 text-red-500">Xato: {error}</p>;
 
   return (
+    <>
     <div className="max-w-[1300px] mx-auto p-4">
       <h2 className="text-3xl font-bold mb-6">Categories</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -65,7 +73,25 @@ const Homes = () => {
           )
         })}
       </div>
+
+
+
+
+
+      
     </div>
+
+   
+<Cards/>
+<NewCards/>
+<Login/>
+<Products/>
+<Brand/>
+<Blog/>
+    
+    </>
+
+
   );
 };
 

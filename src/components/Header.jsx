@@ -12,14 +12,40 @@ const Header = () => {
         <div className="max-w-[1300px] mx-auto flex justify-between items-center py-4 px-4">
           <img src={Logo} alt="logo" className="w-[70px]" />
           
-          
-          <ul className="hidden md:flex gap-10 text-[18px]">
-            <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/">Home</NavLink>
-            <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/products">Products</NavLink>
-            <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/blog">Blog</NavLink>
-            <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/faq">Faq</NavLink>
-            <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/contactus">Contactus</NavLink>
-          </ul>
+<ul className="hidden md:flex gap-10 text-[18px]">
+  <li>
+    <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/">
+      Home
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/products">
+      Products
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/blog">
+      Blog
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/faq">
+      Faq
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink className={({ isActive }) => (isActive ? "text-red-500" : "")} to="/contactus">
+      Contactus
+    </NavLink>
+  </li>
+</ul>
+
+
+
 
           <div className="hidden md:flex gap-6 text-[20px]">
             <i className="fa-regular fa-heart cursor-pointer"></i>
@@ -79,7 +105,7 @@ const Header = () => {
       </div>
 
      
-      <section className="bg-white border-t-2 py-16 px-6 md:px-12 lg:px-24">
+       <section className="bg-white border-t-2 py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
@@ -100,7 +126,7 @@ const Header = () => {
             />
           </div>
         </div>
-      </section>
+      </section> 
     </>
   );
 };

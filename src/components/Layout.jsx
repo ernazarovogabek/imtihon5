@@ -3,7 +3,7 @@ import Header from './Header'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 
-import Homes from './Homes'
+ import Homes from './Homes'
 import Blog from './Blog'
 import Brand from './Brand'
 import Login from './Login'
@@ -16,19 +16,14 @@ const Layout = () => {
     <>
     <Header/>
     <Outlet/>
-
-    
-
-      <Homes/>
-    <Cards/>
-    <Products/>
-    <Login/>
-    <Brand/>
-    <Blog/>  
+   
+     {/* <Homes/>  */}
+    {/* <Cards/> */}
+    {/* <Products/> */}
+    {/* <Login/> */}
+    {/* <Brand/> */}
+    {/* <Blog/>   */}
     <Footer/>
-    
-    
-    
     </>
   )
 }
